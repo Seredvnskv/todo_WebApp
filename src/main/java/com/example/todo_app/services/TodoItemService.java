@@ -23,7 +23,7 @@ public class TodoItemService {
     }
 
     public TodoItem save(TodoItem todoItem) {
-        if (todoItem.getId() != null) {
+        if (todoItem.getId() == null) {
             todoItem.setCreatedAt(Instant.now());
         }
 
